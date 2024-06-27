@@ -1,8 +1,7 @@
 import pandas as pd
+import numpy as np
 
+data=pd.read_csv("my_file1.csv")
+new_data=data.fillna(method="bfill", axis=1)
+print(new_data)
 
-data=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv",
-                 names=["col1","2","de","rt","52e1s"]
-                 )
-
-print(data)

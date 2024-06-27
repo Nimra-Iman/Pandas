@@ -1,4 +1,4 @@
-# they are 2D data structures and they have multiple columns and rows. 
+# they are 2D data structures and they have multiple columns and rows.
 
 import pandas as pd
 a={"roll_no":[1,2,3,4], "name":["nimra","iman","fatima","humiara"]}
@@ -22,7 +22,7 @@ a={"roll_no":[1,2,3,4], "name":["nimra","iman","fatima","humiara"], "age":[20,21
 data=pd.DataFrame(a, columns=["name", "age"], index=["a","b","c","d"])
 # print(data)
 # print("data element present at :", data.iloc[0][1] )   #row position and column position
-# print("data element present at :", data.loc["a"][1] )  #index label name
+# print("data element present at :", data.loc["a"][1] )  #index label name then row position
 
 
 # ------------  CREATE DATA FRAME USING LIST OF LIST
@@ -40,5 +40,7 @@ print(data)
 # --------------  CREATE DATA FRAME USING Series
 x={"name":pd.Series(["nimra","iman","kinza"]), "age":pd.Series([20,21,23])}
 data=pd.DataFrame(x)
-# print(data)
+# print(data)    #series s jab data frames ko create krty hn to "index =" nhi de skty
 
+
+# DATA FRAMES KO USE KRTY HUY HM DATA KA NAME NHI RKH SKTY 

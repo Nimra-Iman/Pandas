@@ -1,10 +1,12 @@
-# SERIES:  it is 1D array that is capable of storing various data types
+# SERIES:  it is 1D array that is capable of storing various data types.
+        # it is like a single column in excel sheet
 import numpy as np
 import pandas as pd
 
 x=[6,7,8,9,10,111,12,3]
 data=pd.Series(x)
 # print(data)   #each element is 64 bit integer, means each element took 8 bytes of memory.
+# print(type(data))
 
 print("the value present at 5th index is :", data[5])
 
@@ -20,13 +22,14 @@ data_new=pd.Series(y, index=["a","b","c","d","e"], name="roll_numbers",
 
 # --------------------  when we pass dictionery instead of list:
 students={"Nimra":4,"apsa":21, "mana":11, "taiba":23}
-data_dict=pd.Series(students)
+data_dict=pd.Series(students)  # dictionery s create kr k hm alag s indexes "index =" nhi kr skty
 # print(data_dict)
 
 language={"name":["python","c++","c"],"rank":[1,2,3], "property":[23,34,45]}
 dat=pd.Series(language)
 # print(dat)  # yhan pr dtype: object ay ga q k hm mixed data types ko use kr rhy hn
             # kuch integers hn or kuch string hn
+             # In pandas, the str type is treated as an object type.
 
 
 # ------------------------  how to create data of single element
@@ -46,4 +49,9 @@ d=[1,2,3]
 c=[2,3,4,5,6]
 data1=pd.Series(d)
 data2=pd.Series(c)
-print(data1+data2)
+print(data1+data2)   #lekin yhan koi error nhi ay ga , pandas missing values ko bhi handle 
+                # krta h , missing vaues ki jga pr NaN (not a number) likh de ga
+
+
+
+# name=, dtype=, index=, 
