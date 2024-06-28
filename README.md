@@ -1,1 +1,1 @@
-# pandas files are currently uploading, don't delete any csv file
+# pandas files are uploaded, upload complete.
