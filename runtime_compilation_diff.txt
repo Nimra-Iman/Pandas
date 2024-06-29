@@ -1,0 +1,17 @@
+Compilation ka matlab y hota h k ap ka code jo k high level programmming language
+m likha hota h us ko convert kia jata h machiene code m ta k vo execute ho sky
+
+Runtime refers to the period when a program is running/executing, after it has been
+compiled or interpreted. During this phase, the program's instructions are executed by
+the computer.
+
+Compilation: Before the program runs.
+Runtime: While the program runs.
+
+
+Compilation: Detects syntax and some semantic errors.
+Runtime: Detects errors that occur during execution, such as logic errors, 
+memory errors, etc.
+
+
+

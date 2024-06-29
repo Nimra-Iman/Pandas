@@ -1,8 +1,16 @@
 import pandas as pd
 data=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv")
 print(data.index)  #yani data k indexes ka pta krna h (output: RangeIndex(start=0, stop=54, step=1) )
+print(data.index.array)  #to get all indices in the form of numpy array
 
 print(data.columns)  #to get the name of all columns
+
+print(data["App"].value_counts())  #  Returns the counts of how many times each
+                # unique value occurs in this column
+
+print(data.isna().sum()) #Shows how many missing values there are on each column.
+
+
 
 print(data.describe())  #dataset m numerical values ki min, max , avg, etc sab de ga
 
@@ -15,11 +23,10 @@ print(data[2:4])   # yani 2 and 3 rows (yani index:2,3) + headerfiles
 
 print(type(data))
 
-print(data.index.array)  #to get all indices in the form of numpy array
 
-# convert full data frame to index:
+# convert full data frame to array:
 print()
-print(data.to_numpy())   #2D array
+print(data.to_numpy())   #2D array 
 # --------  2ND WAY -------
 import numpy as np
 v= np.asarray(data)
@@ -31,11 +38,11 @@ print()
 sorted_data= data.sort_index(ascending=False)
 print(sorted_data)
 print()
-sorted_data= data.sort_values( by= "Notifications", ascending=False)
+sorted_data= data.sort_values( by = "Notifications", ascending=False)
 print(sorted_data)
 
 
-# CHANGE THE SPCIFIC DATA:
+# CHANGE THE SPECIFIC DATA:
 print()
 print()
 data.loc[0,"Date"]="new_date"
@@ -58,3 +65,21 @@ print(data.drop("Date", axis=1)) #axis= 1 for column, yani poora date
 # vala column drop kr do
 
 print(data.drop(0, axis=0))  #axis=0 for row, yani 0 row drop kr do
+
+
+
+data['column_name'].isin(["some_list"])
+# Returns a Series object filled with True or False by checking if the values of the
+# column exists in the given list
+
+data.drop_duplicates()  # Returns a dataframe where rows with duplicate values is 
+# removed to only leave one copy.
+
+data.drop_duplicates(['column_name'])  # # Same as previous but only takes the given
+# column to check for duplicates values. You can give it more than one column name.
+
+
+data.reset_index()
+#  Resets the index to be ordered. Returns a dataframe. This is
+# needed when the index gets shuffled due to merging two
+# dataframes or sorting a dataframe.
