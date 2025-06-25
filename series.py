@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 
-x=[6,7,8,9,10,111,12,3]
+x=[6,7,8,9,10,111,12,3]                           
 data=pd.Series(x)
 # print(data)   #each element is 64 bit integer, means each element took 8 bytes of memory.
 # print(type(data))
@@ -27,7 +27,7 @@ data_dict=pd.Series(students)  # dictionery s create kr k hm alag s indexes "ind
 
 language={"name":["python","c++","c"],"rank":[1,2,3], "property":[23,34,45]}
 dat=pd.Series(language)
-# print(dat)  # yhan pr dtype: object ay ga q k hm mixed data types ko use kr rhy hn
+print(dat)  # yhan pr dtype: object ay ga q k hm mixed data types ko use kr rhy hn
             # kuch integers hn or kuch string hn
              # In pandas, the str type is treated as an object type.
 

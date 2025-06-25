@@ -41,8 +41,13 @@ print(data.replace( "Instagram","fb", limit=2  ))  # FutureWarning: The 'limit' 
 # m jo value missing hoti h to vo missing k ilava vali values ko observe krta h or 
 # us base pr missing values ko fill kr deta h
 
+# No ML technique used behind it, there are different mathematical formuales
+# behind every technoques. 
+
 d=pd.read_csv("my_file1.csv")
-print(d.interpolate(method="index", axis=0))   #ab is m data filling k bhhtt saaary methods aty hn, default
+print(d.interpolate(method="index", axis=0))  
+
+ #ab is m data filling k bhhtt saaary methods aty hn, default
 # method is linear, other methods are:  time, index, values, nearest, zero, slinear etc etc.
 
 # axis=1 yani NaN ko fill krny ki observation row vis ho gi yani k agar hmary pas 3 columns
@@ -56,7 +61,7 @@ print(d.interpolate(method="index", axis=0))   #ab is m data filling k bhhtt saa
 # na hua to fill nhi kia ja sky ga ( and AXIS=0 IS DEFAULT)
 
 # -----------   limit parameter
-print(d.interpolate(method="index", axis=0, limit=2, limit_direction="backward")) # agr ek column m 3 jga NaN aya to bas 2
+print(d.interpolate(method="index", axis=0, limit=2, limit_direction='backward')) # agr ek column m 3 jga NaN aya to bas 2
 # NaN fill kiye jay gy q k limit = 2 ki h
 
 # ------------  limit direction
@@ -64,7 +69,12 @@ print(d.interpolate(method="index", axis=0, limit=2, limit_direction="backward")
 # yhan direction bhi da skty hn, direction can be "forward","backward","both". forward
 # direction ka matlab y hua k just upr vali 2 NaN fill hon gi, backward ki matlab k
 # neechy vali 2 fill hon gi and both ka matlab uper s bhi 2 or neechy s bhi 2 fill hon gi 
-# agar NaN are more than or equal to 4.
+# agar NaN are more than or equal to 4. ,,,, q k limit-direction=forward s murad 
+# asal m y h k agar ek column m 3 values missing thi to un missing vali s uper vali
+# ki base pr neechy valo ko fill kia jay ga or ab agar limit = 2 kr di to bs uper valo ki
+# base pr phli 2 ko hi fill kia jay ga ,  or agar limit-direction=backward kr dia to
+# neechy valo ki base pr un missing ko fill kia jay ga or ab limit=2 kr di to neechy
+# valo ki base pr uper vali sirf 2 NaN ko hi fill kia jay ga q k limit hi bas 2 ki h
 
 # ------------------- limit_area:
 # limit_area is used to restrict the area where interpolation is applied.
@@ -76,6 +86,4 @@ print(d.interpolate(method="index", axis=0, limit=2, limit_direction="backward")
 # beginning or the end of the data.
 
 
-
-# ---------  inplace=True   (yani permanent change)
 

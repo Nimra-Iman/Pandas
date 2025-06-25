@@ -20,5 +20,5 @@ print(data)
 
 
 # ---------------  other logical operations:
-data["comparison"]= data["a"]>=30
+data["comparison"]= data["a"]>=30   #
 print(data)

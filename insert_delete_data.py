@@ -24,7 +24,7 @@ datas["new_column"]=x1
 
 datas["new_columns"]=datas["age"][:2]  # yani hm chahty hn k age column vala data hi us k
 # ander jay but saara na jay to hm us ki slicing kry gy
-# print(datas)
+print(datas)
 
 
 #  ---------------------  DELETE A SPECIFIC COLUMN:
@@ -33,5 +33,6 @@ print("the deleted column is :\n",deleted_col )
 print("new data after deleteing the column is :\n", datas)
 
 # ------------  2ND WAY ------------
-del datas["new_cols"]
+del datas["new_cols"]  #via "del" keyword, column is permanantly deleted, so that's why, 
+                    # deleted column cannot be shown in output.
 print(datas)

@@ -14,21 +14,21 @@ data=pd.DataFrame(a, columns=["name"])
 # --------  PASS NEW INDEXES:
 a={"roll_no":[1,2,3,4], "name":["nimra","iman","fatima","humiara"], "age":[20,21,23,11]}
 data=pd.DataFrame(a, columns=["name"], index=["a","b","c","d"])
-# print(data)
+print(data)
 
 
 # ---------  TO GET VALUES AT A SPECIFIC INDEX:
 a={"roll_no":[1,2,3,4], "name":["nimra","iman","fatima","humiara"], "age":[20,21,23,11]}
 data=pd.DataFrame(a, columns=["name", "age"], index=["a","b","c","d"])
 # print(data)
-# print("data element present at :", data.iloc[0][1] )   #row position and column position
-# print("data element present at :", data.loc["a"][1] )  #index label name then row position
+############################ print("data element present at :", data.iloc[0][1] )   #row position and column position
+############################ print("data element present at :", data.loc["a"][1] )  #index label name then row position
 
 
 # ------------  CREATE DATA FRAME USING LIST OF LIST
 x=[[11,22,33,44],[66,55,77,88]]
 data=pd.DataFrame(x)
-# print(data)  # this will give column name 0 ,1 ,2, 3
+print(data)  # this will give column name 0 ,1 ,2, 3
 
 x=[[11,22,33,44],[66,55,77,88]]
 data=pd.DataFrame(x, columns=["A","B","C","D"])
