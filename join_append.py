@@ -34,9 +34,13 @@ n=data1.join(data2, lsuffix="_phla", rsuffix="_phla")
 # yhan error ay ga agr hm sufix na den , q k join error deta h jab hmary datafames
 # m kisi column ka name same ho, is liye lsuffix ya rsuffix k zrye hm kisi ek column ka
 # name change kr dety hn, ap chahy to lsuffix and rsuffix dono use krskty or chahy 
-# lsuffix and rsuffix dono m same values hon to phir bhi error nhi ay ga q k ab y dono
-# columns different hn
+# lsuffix and rsuffix dono m same values hon to phir bhi error nhi ay ga BUT it is not
+# advisable, try to write different names. 
 
+# MAKING LONG STORY SHORT: 'join' joins data frames on the basis of indexes and if
+# column name are same it will generate error. this issue is handled by suffixand if
+# lsuffix and rsuffix have same name, no error wil generate but this is not advisable
+# to have same name in both lsuffux and ruffix
 
 
 # ---------------  append ---------------
@@ -44,4 +48,4 @@ n=data1.join(data2, lsuffix="_phla", rsuffix="_phla")
 data1=pd.DataFrame({"roll_no":[13,41],"age":[15,17]}, index=["a","b"])
 data2=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"]},index=["a","b","c","d"])
 new=data1._append(data2, ignore_index=True)
-print(new)
+print(new)  #data2, ignore_index=True krny s indexes tarteeb s ay gy.
