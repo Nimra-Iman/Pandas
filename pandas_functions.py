@@ -1,4 +1,9 @@
 import pandas as pd
+
+# --> TO CONVERT NUMERICAL DATA TO CATEGORICAL, WE USE pd.cut(data['months'], bins = 5), 
+# suppose we have month variable showing how much months you work with us, data is numerical
+# so it wil convert it into 5 bins of (0-5), (6-10) months etc etc 
+
 # data=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv")
 # print(data.index)  #yani data k indexes ka pta krna h (output: RangeIndex(start=0, stop=54, step=1) )
 # print(data.index.array)  #to get all indices in the form of numpy array
