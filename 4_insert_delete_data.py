@@ -11,7 +11,7 @@ datas=pd.DataFrame(x)
 new_data=pd.Series([23,34,45])
 datas.insert(1,"new_col",new_data)  #yani mujy output m y column "1" index pr show ho
 datas.insert(3, "new_cols",datas["age"])
-# print(datas)
+print(datas)
 
 
 
@@ -20,7 +20,7 @@ datas.insert(3, "new_cols",datas["age"])
 
 x1=pd.Series([23,34])
 datas["new_column"]=x1
-# print(datas)
+print(datas)
 
 datas["new_columns"]=datas["age"][:2]  # yani hm chahty hn k age column vala data hi us k
 # ander jay but saara na jay to hm us ki slicing kry gy

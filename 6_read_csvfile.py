@@ -3,10 +3,10 @@ import pandas as pd
 # print(file)
 
 
-file=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv", nrows=3,
+file=pd.read_csv("C://code_fun//1_NUMPY//Screentime - App Details.csv", nrows=3,
                   usecols=["Notifications"])  #baaz oqat formward slashes 
         # jab k double back slashes use hoti hn.
-# print(file)
+print(file)
 
 # nrows=1 (to get a specific row from the dataset) is 
 # s yani nrows=1 s hust ek row show ho gi + header row

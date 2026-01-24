@@ -1,23 +1,12 @@
 import pandas as pd
-<<<<<<< HEAD
-df = pd.DataFrame({
-    "Name": ["Ali", "Sara"],
-    "Math": [90, 85],
-    "Science": [88, 95]
-})
 
-d = pd.melt(df,id_vars='Name', value_name= 'subject',var_name='marks')
+# series: name, index, dictionery, list
+df = pd.Series([1,2,3,4,5], name = 'demo_date', index = [11,12,12,12,12])
+# print(df)
+
+data = pd.Series({'name':1, "name2":2})
+# print(data)
+
+# ----------------------------------------------------------------------------------------------------
+d = pd.DataFrame(([1,2,3,4],[6,7,8,9]),  index = [1,2], columns = [1,2,3,4])
 print(d)
-
- 
-
-=======
-data = pd.read_csv('C:\\code_fun\\1_NUMPY\\Screentime - App Details.csv')
-
-
-# print(data.head)
-data = data.sort_values(by = 'Notifications', ascending=True)
-
-data = data.reset_index(drop=True)
-print(data.head)
->>>>>>> ff645e9 (add more files)
