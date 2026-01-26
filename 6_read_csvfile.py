@@ -55,7 +55,8 @@ file=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv", header=2)
 # -----------  TO CHNAGE THE NAME OF COLUMNS:
 file=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv",
                  names=["col1", "col2","col3","col4","col5"]) 
-# print(file) 
+# df.rename(columns={"old_name": "new_name"}, inplace=True)
+
 
 # ------------  REMOVING HEADER:
 # header=None krny s headers khtm ho kr, 0,1,2 ... show hon gy

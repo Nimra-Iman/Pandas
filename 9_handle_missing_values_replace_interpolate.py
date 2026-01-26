@@ -66,15 +66,21 @@ print(d.interpolate(method="index", axis=0, limit=2, limit_direction='backward')
 
 # ------------  limit direction
 # agr ek column m 3 jga NaN aya to bas 2 NaN fill kiye jay gy q k limit = 2 ki h, ab hm
-# yhan direction bhi da skty hn, direction can be "forward","backward","both". forward
-# direction ka matlab y hua k just upr vali 2 NaN fill hon gi, backward ki matlab k
-# neechy vali 2 fill hon gi and both ka matlab uper s bhi 2 or neechy s bhi 2 fill hon gi 
-# agar NaN are more than or equal to 4. ,,,, q k limit-direction=forward s murad 
+# yhan direction bhi da skty hn, direction can be "forward","backward","both". 
+# limit-direction=forward s murad 
 # asal m y h k agar ek column m 3 values missing thi to un missing vali s uper vali
 # ki base pr neechy valo ko fill kia jay ga or ab agar limit = 2 kr di to bs uper valo ki
 # base pr phli 2 ko hi fill kia jay ga ,  or agar limit-direction=backward kr dia to
 # neechy valo ki base pr un missing ko fill kia jay ga or ab limit=2 kr di to neechy
-# valo ki base pr uper vali sirf 2 NaN ko hi fill kia jay ga q k limit hi bas 2 ki h
+# valo ki base pr  sirf 2 NaN ko hi fill kia jay ga q k limit hi bas 2 ki h
+
+
+# Forward fill does NOT start at the top
+# It fills NaNs only after a valid value appears above.
+
+# Backward fill does NOT start at the bottom
+# It fills NaNs only if a valid value exists below.
+
 
 # ------------------- limit_area:
 # limit_area is used to restrict the area where interpolation is applied.

@@ -1,8 +1,7 @@
 import pandas as pd
-import pandas as pd 
 
 data=pd.read_csv("my_file1.csv")
-# print(data)    #ab is data k ander kuch empty values hn, jin ki jga NaN likha hua h
+print(data)    #ab is data k ander kuch empty values hn, jin ki jga NaN likha hua h
 
 # Drop NaN vali poori row:
 new_data=data.dropna()      #ab vo rows jin m NaN tha, vo poori row hi drop ho gi, ab us 
@@ -16,21 +15,16 @@ n_data=data.dropna(axis=1)
 # --------  agar mery data m koi poori row hi esi a gai jis m NaN tha, to m us poori
 # row ko htany k liye how="any" kru gi
 
-print(data.dropna(how="any"))   #esy krny s mery pas mojood poori empty row or saath saath
-    # baki rows jin m NaN tha , vo bhi drop ho jay gi
+print(data.dropna(how="any"))   #this is default, means drop the rows where any value is missing
 print(data.dropna(how="all"))   # esy krny s just vo poori row drop ho gi jo empty thi
     # but baki rows jin m ek ya 2 ya kuch NaN tha, vo rhy gi. (yani vo row drop
     #                   kro jis k ander all NaN hn)
 
 
-# -------  agar m chahti hu k kisi column m jo bhi NaN values hn, to us NaN vali saari 
-    # row drop ho lekin bas usi column m jo empty hon vhi row drop ho, baki na ho:
 
 print()
 print()
-print(data.dropna(subset="City"))  #ab city valy m jo bhi NaN hn, us NAN vali poori 
-            # row drop ho gi, is s ab city valy column m koi bhi NaN nhi rhy
-
+print(data.dropna(subset=["City", 'Year']))  #ab vhi rows drop hon gi jis m city and years ki values null hon gi
 
 # --------  Agar ap chahty ho k NaN values drop ho kr purana dataset new saaf dataset m
 #   convert ho jay to hm inplace  parameter ko use kryn gy:
@@ -40,15 +34,11 @@ print()
 # print(data)    # ab data k name s hi nia saath suthra NaN k bagher vala dataset create ho gya
 
 
-# ------- thresh = 3 ka matlab y h k un rows ko drop kro jin k ander non-NaN values 3 
-            # s km hn, thresh=2 ka matlab y h k un rows ko drop kro jin k ander non_NaN
-            # values 2 s km hn.   
-
 
 # print(data.dropna(thresh=2))
-print(data.dropna(thresh=2, axis=1))  #ab esa ho ga k vo column drop ho ga jis m
-                # non-NaN values 2 s km hon gi,,,,, vesy koi column bhi is data set m
-                # condition pr nhi utr rha.
+print(data.dropna(thresh=2, axis=1))  # keep only those columns that have at least 2 non-NaN values
+# columns with fewer than 2 non-NaN values will be dropped,,,, yani un columns ko rkho jin m km s km 2 values
+# filled hn, agr kisi column m 2 s km values filled hn to usy drop kr do
 print()
 print()
 
@@ -70,7 +60,7 @@ print(data.fillna(method="ffill", axis=0))  # yani row vis, yani NaN k left side
         # ho gi vo forward shift ho gi yani NaN ko fill kry gi, agar us k left side pr koi
         # value na hui to NaN kisi value s fill nhi ho ga
 
-# print(data.fillna(methd="bfill", axis=0, inplace=True))  #inplace = true same 
+print(data.fillna(methd="bfill", axis=0, inplace=True))  #inplace = true same 
                 # functionality as for dropna
     
 print(data.fillna("PYTHON", limit=2)) # limit=2 krny s esa ho ga k agar ek column m 5
