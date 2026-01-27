@@ -25,7 +25,7 @@ print(new_data.get_group("Aloce"))
 # to get minimum valued data from all groups
 print()
 print(new_data.min())
-print(new_data.max())  #Aloce   age(90)   number(56)    subject(phy) yani, aloce k
+print(new_data.max())  #Aloce   age(90)   number(56)    subject(phy) yani, aloce group k 
 # age valy column m maximum 90 tha, number valy column m maximum 56 tha or subjects
 # vay column m maximum baar phy aya
 

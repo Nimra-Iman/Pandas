@@ -5,7 +5,8 @@
 
 import pandas as pd
 data=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"],"age":[15,16,17,18]})
-print(pd.melt(data, id_vars="roll_no", var_name="Col_name", value_name="raqam"))  #melt convert dataframe from wide format to long formate
+print(pd.melt(data, id_vars="roll_no", var_name="Col_name", value_name="raqam"))  #melt convert dataframe 
+# from wide format to long formate
 # id_vars is used jab ap kisi column name ko id k tor pr use krna chahty hn.
 
 #  roll_no  variable  value , output m esy show ho rha h, hm chahty hn k variable ki jga
@@ -29,6 +30,6 @@ print()
 data=pd.DataFrame({"roll_no":[1,2,3,4,5,6],"name":["ana","joe","bob","jan","joe","joe"],
                    "age":[15,16,17,18,18,16],"class":[2,3,4,5,2,3]})
 
-print(data.pivot_table(index="roll_no", columns="name", aggfunc="mean" , margins="True"))
+# print(data.pivot_table(index="roll_no", columns="name", aggfunc="mean" , margins="True"))
 
 
