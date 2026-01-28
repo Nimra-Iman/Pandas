@@ -9,7 +9,9 @@ data2=pd.DataFrame({"roll_no":[1,13,41],"age":[15,17,18]}, index=["a","b","c"])
 new=data1.join(data2)
 # print(new)
 
+ 
 
+ 
 
 
 # --------------------  2nd condition

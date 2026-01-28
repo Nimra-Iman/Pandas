@@ -45,7 +45,7 @@ d = pd.melt(data, id_vars = 'day' ) #id_vars m vo column rkhna h jis ko
 d = pd.melt(data, id_vars = 'day', var_name = 'city', value_name='temperature') # out data is
 # finally ready and we can apply filters to show the temperature of specific city, like below
 # print(d[d['city']=='chicago'])
-print(d)
+# print(d)
 
 
                                     # PIVOT
