@@ -63,9 +63,9 @@ d2=pd.Series([11,12])
 print()
 print()
 data1=pd.DataFrame({"id":[1,3],"name":["bob","jan"]})
-data2=pd.DataFrame({"id":[1,2,13,41],"name":[15,16,17,18]})
-print(pd.concat([data1,data2], axis=1, join="outer", keys=["d1","d2"]))
-# print(pd.concat([data1,data2], axis=0,  keys=["d1","d2"]))
+data2=pd.DataFrame({"id":[1,2,13,41],"nameee":[15,16,17,18]})
+# print(pd.concat([data1,data2], axis=1, join="outer", keys=["d1","d2"]))
+print(pd.concat([data1,data2], axis=0,  keys=["d1","d2"]))
 
 # ab jo missing data NaN s show ho rha tha us ko htany k liye join="inner" likhy gy;
 # join can be "inner", "outer";; "inner" means intersection( yani just common) and 
