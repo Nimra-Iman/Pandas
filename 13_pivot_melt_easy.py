@@ -75,6 +75,8 @@ print(pt)   #is n aggregated function apply kr k result show kia and 'aggfunc' m
 # by default function, q k pury dataset m ek date and ek city pr 2 2 humidity and temperature
 # ki values thi, us n dono values ka mean lia or show kr dia,,, we can also chnage 
 # aggfunc as count, add etc etc 
+pt = pd.pivot_table(data, index = 'date', columns = 'city', aggfunc='count')
+print(pt)   #here aggfunc is count
 
 # pt = pd.pivot_table(data, index = 'date', columns = 'temperature')
 # print(pt) error because agg function failed [how->mean,dtype->object]

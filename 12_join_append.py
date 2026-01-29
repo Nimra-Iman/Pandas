@@ -28,6 +28,7 @@ new_data=data1.join(data2, how="right")
 data1=pd.DataFrame({"roll_no":[13,41],"age":[15,17]}, index=["a","b"])
 data2=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"]},index=["a","b","c","d"])
 n=data2.join(data1, lsuffix="_phla", rsuffix="_phla")  
+n=data1.join(data2, lsuffix="_phla", rsuffix="_phla")  
 print(n)
 # yhan error ay ga agr hm sufix na den , q k join error deta h jab hmary datafames
 # m kisi column ka name same ho, is liye lsuffix ya rsuffix k zrye hm kisi ek column ka
