@@ -7,11 +7,7 @@ data2=pd.DataFrame({"roll_no":[1,13,41],"age":[15,17,18]}, index=["a","b","c"])
 
 # ab agar m yhan dono dataframes k indexes different krti to y join na hota
 new=data1.join(data2)
-# print(new)
-
- 
-
- 
+print(new)
 
 
 # --------------------  2nd condition
@@ -31,8 +27,8 @@ new_data=data1.join(data2, how="right")
 # -----------------------  3rd casse:
 data1=pd.DataFrame({"roll_no":[13,41],"age":[15,17]}, index=["a","b"])
 data2=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"]},index=["a","b","c","d"])
-n=data1.join(data2, lsuffix="_phla", rsuffix="_phla")  
-# print(n)
+n=data2.join(data1, lsuffix="_phla", rsuffix="_phla")  
+print(n)
 # yhan error ay ga agr hm sufix na den , q k join error deta h jab hmary datafames
 # m kisi column ka name same ho, is liye lsuffix ya rsuffix k zrye hm kisi ek column ka
 # name change kr dety hn, ap chahy to lsuffix and rsuffix dono use krskty or chahy 
@@ -51,3 +47,5 @@ data1=pd.DataFrame({"roll_no":[13,41],"age":[15,17]}, index=["a","b"])
 data2=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"]},index=["a","b","c","d"])
 new=data1._append(data2, ignore_index=True)
 print(new)  #data2, ignore_index=True krny s indexes tarteeb s ay gy.
+
+
