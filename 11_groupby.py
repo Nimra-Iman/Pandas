@@ -10,7 +10,7 @@ data=pd.DataFrame({"name":["joe","pop","bob","Aloce","Aloce","pop","pop","pop","
                                 "math","eng","bio","phy","phy"]})
 # print(data)
 new_data=data.groupby("name")  #yani data to name ki basis pr group kr do
-# print(new_data)  #this will give memory location.
+print(new_data)  #this will give memory location.
 # li=list(new_data)
 # print(li)
 # in order to get actual data, you have to use loop:
@@ -33,8 +33,8 @@ print(new_data.max())  #Aloce   age(90)   number(56)    subject(phy) yani, aloce
 print()
 print()
 print()
-numeric_cols = data.select_dtypes(include='number').columns
-print(new_data[numeric_cols].mean())    #mean of just numeric values
+# numeric_cols = data.select_dtypes(include='number').columns
+# print(new_data[numeric_cols].mean())    #mean of just numeric values
 
 
 

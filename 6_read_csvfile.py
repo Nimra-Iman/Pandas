@@ -71,3 +71,4 @@ file=pd.read_csv("C:/code_fun/1_NUMPY/Screentime - App Details.csv", dtype={"Not
 print(file)
 
 # nrows, usecols, skiprows, index_col, header=2, names, header=None, prefix, dtype.
+
