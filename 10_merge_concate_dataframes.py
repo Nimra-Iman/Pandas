@@ -52,7 +52,7 @@ print(pd.merge(data1,data2, left_index=True, right_index=True, suffixes=("phlaT"
 # print(pd.merge(data1, data2, on = 'id', left_index=True, right_index=True)) --ERROR BECAUSE
 # Can only pass argument "on" OR "left_index" and "right_index", not a combination of both.
 
-# --------------------  CONCAT  ----------------------------------------
+# --------------------  CONCAT (INDXES KI BASE PR CONCAT KRTA H) ----------------------------------------
 d1=pd.Series([1,2,3,4,5])
 d2=pd.Series([11,12])   
 # print(pd.concat([d1,d2], axis=1))   # chahy same length na bhi ho
