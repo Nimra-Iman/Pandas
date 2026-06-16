@@ -1,7 +1,9 @@
 import pandas as pd
 x={"name":["nimra","imna","kinza"], "age":[21,23,21]}
 datas=pd.DataFrame(x)
-# print(datas)
+print(datas)
+print()
+print()
 
 # -------------------------in order to insert new column in the data:
 

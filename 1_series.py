@@ -15,6 +15,7 @@ data=pd.Series(x)
 # each element of series has 64 bit memery means in each element, we can store that huge amount
 
 
+
 print("the value present at 5th index is :", data[5])
 
 
@@ -65,7 +66,7 @@ print(data1+data2)   #lekin yhan koi error nhi ay ga , pandas missing values ko 
 
 
 # although we cannot call the series with the name that we give to series using name attribute, but 
-# it is highly adventegeous as when we convert a sewries into dataframe or concatenating multiple'
+# it is highly adventegeous as when we convert a series into dataframe or concatenating multiple'
 # series , the name automaltically becomes column name. When visualizing data, plotting 
 # libraries (like Matplotlib via Pandas) automatically use the Series name as the label for the axis.
 
