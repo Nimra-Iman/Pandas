@@ -9,7 +9,7 @@ new_data=data.dropna()      #ab vo rows jin m NaN tha, vo poori row hi drop ho g
 
 # by- default dropna row k across drop krta , but hm chahty n k vo NaN jhan ho to us
 # ki poori row ki bijay vo poora column hi drop ho jay to axis = 1 daal do simple:
-n_data=data.dropna(axis=1)
+n_data=data.dropna(axis=1 )
 # print(n_data)
 
 # --------  agar mery data m koi poori row hi esi a gai jis m NaN tha, to m us poori
@@ -37,8 +37,8 @@ print()
 
 # print(data.dropna(thresh=2))
 print(data.dropna(thresh=2, axis=1))  # keep only those columns that have at least 2 non-NaN values
-# columns with fewer than 2 non-NaN values will be dropped,,,, yani un columns ko rkho jin m km s km 2 values
-# filled hn, agr kisi column m 2 s km values filled hn to usy drop kr do
+# columns with fewer than 2 non-NaN values will be dropped,,,, yani un columns ko rkho jin 
+# m km s km 2 values filled hn, agr kisi column m 2 s km values filled hn to usy drop kr do
 print()
 print()
 

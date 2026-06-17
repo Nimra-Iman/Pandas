@@ -45,7 +45,8 @@ data2=pd.DataFrame({"id":[1,2,13,41],"age":[15,16,17,18]})
 # ----------------  left_index, right_index
 data1=pd.DataFrame({"id":[1,2,3,4],"name":["ana","joe","bob","jan"]})
 data2=pd.DataFrame({"id":[1,2,13,41],"name":[15,16,17,18]})
-print(pd.merge(data1,data2, left_index=True, right_index=True, suffixes=("phlaT","dusraT")))  #yani agar dono tables
+print(pd.merge(data1,data2, left_index=True, right_index=True, suffixes=("phlaT","dusraT"))) 
+ #yani agar dono tables
 # k columns k name same hn to in s pta lag jay ga k kis dataframe ki kon c value h
 # ----  phlaT yani phly table  
 # ----  dusraT yani dusra table
@@ -82,5 +83,19 @@ d2=pd.DataFrame({"A":[12,13,12,12,12],"B":[67,67,54,32,12]})
 
 
 
+# INDEX KI BASE PR ESY KRTA H Y:
+# df1
+#     A
+# 0   10
+# 1   20
 
+# df2
+#     B
+# 1   30
+# 2   40
+
+#       A     B
+# 0  10.0   NaN
+# 1  20.0  30.0
+# 2   NaN  40.0
 

@@ -1,20 +1,15 @@
 import pandas as pd
 
-
-a={"roll_no":[1,2,3,4], "name":["nimra","iman","fatima","humiara"], "age":[20,21,23,11]}
-# data=pd.DataFrame(a, columns=["name", "age"], index=["a","b","c","d"])
-data=pd.DataFrame(a, index=["a","b","c","d"])
-print(data)
-print("data element present at :", data.iloc[[0,2],2] ) 
-
-print()
-print()
-print()
-print()
-# loc function gives value on the basis of index:
-# print(data.loc['a'])
-# print(data.loc[['a','b'],'name'])
-
+import pandas as pd
+data = pd.read_csv('weather2.csv')
+print(data)   #is table format pr analysis difficult h, we will format it usijg melt
+# d = pd.melt(data, id_vars = 'day' ) #id_vars m vo column rkhna h jis ko 
+# # hm chnage nhi krna chahty, ab melt to ho gya table but column ka name variable and value
+# # a rha h, us ko following way s chnage kryn gy
+# d = pd.melt(data, id_vars = 'day', var_name = 'city', value_name='temperature') # out data is
+# # finally ready and we can apply filters to show the temperature of specific city, like below
+# # print(d[d['city']=='chicago'])
+# # print(d)
 
 
 

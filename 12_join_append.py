@@ -30,7 +30,7 @@ data2=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"]},index=
 n=data2.join(data1, lsuffix="_phla", rsuffix="_phla")  
 n=data1.join(data2, lsuffix="_phla", rsuffix="_phla")  
 print(n)
-# yhan error ay ga agr hm sufix na den , q k join error deta h jab hmary datafames
+# agr hm suffix na den to error ay ga , q k join error deta h jab hmary datafames
 # m kisi column ka name same ho, is liye lsuffix ya rsuffix k zrye hm kisi ek column ka
 # name change kr dety hn, ap chahy to lsuffix and rsuffix dono use krskty or chahy 
 # lsuffix and rsuffix dono m same values hon to phir bhi error nhi ay ga BUT it is not
@@ -49,4 +49,11 @@ data2=pd.DataFrame({"roll_no":[1,2,3,4],"name":["ana","joe","bob","jan"]},index=
 new=data1._append(data2, ignore_index=True)
 print(new)  #data2, ignore_index=True krny s indexes tarteeb s ay gy.
 
+
+| Feature              | concat()                        | join()                 |
+| -------------------- | ------------------------------- | ---------------------- |
+| Purpose              | Stack DataFrames                | Match and combine data |
+| Uses indexes?        | Sometimes (especially `axis=1`) | Yes, by default        |
+| Add rows?            | Yes                             | No                     |
+| Add columns?         | Yes                             | Yes                    |
 
