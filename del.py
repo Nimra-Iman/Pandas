@@ -1,15 +1,7 @@
 import pandas as pd
+data1=pd.DataFrame({"A":[1,2,3,4],"B":[5,6,8,5]})
+data2=pd.DataFrame({"A":[1,2,3,4],"C":[15,16,17,18]})
 
-import pandas as pd
-data = pd.read_csv('weather2.csv')
-print(data)   #is table format pr analysis difficult h, we will format it usijg melt
-# d = pd.melt(data, id_vars = 'day' ) #id_vars m vo column rkhna h jis ko 
-# # hm chnage nhi krna chahty, ab melt to ho gya table but column ka name variable and value
-# # a rha h, us ko following way s chnage kryn gy
-# d = pd.melt(data, id_vars = 'day', var_name = 'city', value_name='temperature') # out data is
-# # finally ready and we can apply filters to show the temperature of specific city, like below
-# # print(d[d['city']=='chicago'])
-# # print(d)
-
-
-
+print(data1)
+# data = data1.merge(data2, how = 'outer')
+# print(data)

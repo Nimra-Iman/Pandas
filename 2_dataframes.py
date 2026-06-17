@@ -21,7 +21,7 @@ print(data)
 a={"roll_no":[1,2,3,4], "name":["nimra","iman","fatima","humiara"], "age":[20,21,23,11]}
 data=pd.DataFrame(a, columns=["name", "age"], index=["a","b","c","d"])
 print(data)
-print("data element present at :", data.iloc[0, 1] )   #row position and column position
+print("data element present at :", data.iloc[[0,1], 1] )   #row position and column position
 ############################ print("data element present at :", data.loc["a"][1] )  #index label name then row position
 
 
